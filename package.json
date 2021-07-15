@@ -6,7 +6,7 @@
   "homepage": "https://Vasyl-Dzumedzei.github.io/good-devs-icecream",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /pgood-devs-icecream/"
+    "build": "parcel build src/*.html --public-url /good-devs-icecream/"
   },
   "repository": {
     "type": "git",
