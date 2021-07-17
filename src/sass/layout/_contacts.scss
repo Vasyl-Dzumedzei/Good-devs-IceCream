@@ -1,0 +1,23 @@
+.contacts-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //   flex-flow: row wrap;
+  background-image: linear-gradient(to top, $made-color 92%, $primary-white-color 8%);
+}
+
+.contacts-card {
+  width: 220px;
+  background: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  padding: 43px 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+    padding: 43px 40px;
+  }
+}
