@@ -1,0 +1,56 @@
+@function pow($base) {
+  $result: $base - (346px + 20px);
+  @return $result;
+}
+
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 137px;
+  padding-bottom: 160px;
+  background-color: $header-section-color;
+  background-image: url('../images/header/png/slider_ice_cream_mob.png'),
+    url('../images/circle.svg');
+  background-repeat: no-repeat;
+  background-size: 171px 410px, 346px 346px;
+
+  background-position: left 117px bottom 0px, left 36px bottom 75px;
+  @media screen and(min-width: 480px) {
+    background-position: right 192px bottom 0px, right 98px bottom 75px;
+  }
+}
+
+.hero__heading {
+  @include font(48px, 0.965, 0em, 400, left);
+  text-transform: uppercase;
+  color: $accent-color;
+  margin-bottom: 20px;
+}
+
+.hero__heading--white {
+  @include font(26px, 1.145, 0em, 400, left);
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+
+.hero-link__button {
+  display: inline-flex;
+  height: 24px;
+  border-radius: 24px;
+  @include font(8px, 1.303, 0em, 400, center);
+  padding-left: 14px;
+  padding-right: 14px;
+  align-items: center;
+}
+
+.hero-link__button--first {
+  background-color: $accent-color;
+  color: $primary-white-color;
+  margin-right: 8px;
+}
+
+.hero-link__button--secondery {
+  background-color: $primary-white-color;
+  color: $accent-color;
+}
