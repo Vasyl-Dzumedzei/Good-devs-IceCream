@@ -133,3 +133,21 @@ img {
 .products-set__data--milkshakes {
   background-color: $rectangle-color-milkshakes;
 }
+
+.pseudo {
+  width: 20px;
+  height: 7px;
+
+  position: relative;
+}
+.pseudo::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $primary-white-color;
+
+  position: absolute;
+
+  box-shadow: 8px 0 0 0 $primary-white-color, 16px 0 0 0 $primary-white-color;
+}
