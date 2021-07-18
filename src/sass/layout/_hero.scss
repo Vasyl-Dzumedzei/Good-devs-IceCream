@@ -30,6 +30,7 @@
 
 .hero__heading--white {
   @include font(26px, 1.145, 0em, 400, left);
+  display: inline-block;
   text-transform: uppercase;
   color: $primary-white-color;
 }
