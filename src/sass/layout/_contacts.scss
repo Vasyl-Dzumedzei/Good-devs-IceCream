@@ -110,7 +110,7 @@
   }
 }
 
-.contacts__button--pink {
+.contacts__button--first {
   background-color: $button-color;
   &:hover {
     background-color: $hover-btn-header-color;
@@ -121,7 +121,7 @@
   }
 }
 
-.contacts__button--white {
+.contacts__button--second {
   background-color: $primary-white-color;
   &:hover {
     background-color: #ecebeb;
