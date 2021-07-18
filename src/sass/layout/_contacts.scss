@@ -8,8 +8,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //   flex-flow: row wrap;
-  background-image: linear-gradient(to top, $made-color 92%, $primary-white-color 8%);
 }
 
 .contacts-card {
@@ -82,13 +80,19 @@
   padding-top: 25px;
 }
 
+.contacts-card-address__phone,
+.contacts-card-address__mail {
+  color: inherit;
+}
+
 // BUTTONS
 
 .contacts-buttons-wrapper {
   margin-top: 54px;
 }
 
-.contacts__button {
+.contacts__button--locations,
+.contacts__button--franchise {
   border-radius: 22px;
   width: 161px;
   height: 44px;
@@ -103,18 +107,29 @@
   }
 }
 
-.contacts__button--pink {
+.contacts__button--first {
   background-color: $button-color;
+  &:hover {
+    background-color: $hover-btn-header-color;
+  }
   .contacts__button-text {
     @include font(16px, 1.313, 0em, 700, center);
     color: $primary-white-color;
   }
 }
 
-.contacts__button--white {
+.contacts__button--second {
   background-color: $primary-white-color;
+  &:hover {
+    background-color: #ecebeb;
+  }
   .contacts__button-text {
     @include font(16px, 1.313, 0em, 700, center);
     color: $accent-color;
   }
+}
+
+.contacts__button-icon--white,
+.contacts__button-icon--pink {
+  margin-left: 8px;
 }
