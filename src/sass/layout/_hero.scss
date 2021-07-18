@@ -12,6 +12,22 @@
   background-color: $header-section-color;
   background-image: url('../images/header/png/slider_ice_cream_mob.png'),
     url('../images/circle.svg');
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/header/png/slider_ice_cream_mob@2x.png'),
+      url('../images/circle.svg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (-webkit-min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url('../images/header/png/slider_ice_cream_mob@3x.png'),
+      url('../images/circle.svg');
+  }
+
   background-repeat: no-repeat;
   background-size: 171px 410px, 346px 346px;
 

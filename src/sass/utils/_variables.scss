@@ -2,6 +2,7 @@ $color-ellipse: #ffa5ba;
 $made-color: #fff5f6;
 $header-section-color: #ffb8ca;
 $accent-color: #d41443;
+$hover-btn-header-color: #c7133e;
 $rectangle-color-coffee: #f0d1a5;
 $rectangle-color-milkshakes: #c2e297;
 $comment-text-color: #000000;
@@ -9,8 +10,12 @@ $second-text-color: #907e82;
 $products-section-color: #e5e5e5;
 $primary-white-color: #ffffff;
 $mobile-menu-color: #e17992;
+$mobile-menu-items-color: #e18298;
 $background-comment-color: #e1e1e1;
 $location-box-shadow-color: rgba(212, 20, 67, 0.1);
 
 $heading-font-family: Titan One, sans-serif;
 $primary-font-family: DM Sans, sans-serif;
+
+$transition-duration: 250ms;
+$transition-function: cubic-bezier(0.4, 0, 0.2, 1);

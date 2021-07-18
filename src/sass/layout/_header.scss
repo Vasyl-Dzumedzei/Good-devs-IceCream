@@ -1,6 +1,3 @@
-$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-$transition-duration: 1500ms;
-
 .header {
   background-color: $header-section-color;
 }
@@ -73,12 +70,12 @@ $transition-duration: 1500ms;
 
     background-color: $mobile-menu-color;
 
-    transition: transform $transition-duration $transition-timing-function,
-      opacity $transition-duration $transition-timing-function,
-      width $transition-duration $transition-timing-function,
-      overflow $transition-duration $transition-timing-function,
-      visibility $transition-duration $transition-timing-function,
-      padding $transition-duration $transition-timing-function;
+    transition: transform $transition-duration $transition-function,
+      opacity $transition-duration $transition-function,
+      width $transition-duration $transition-function,
+      overflow $transition-duration $transition-function,
+      visibility $transition-duration $transition-function,
+      padding $transition-duration $transition-function;
   }
 
   @media screen and(min-width: 768px) {
@@ -99,7 +96,7 @@ $transition-duration: 1500ms;
 
 .menu.is-hidden {
   position: fixed;
-  z-index: 999;
+  z-index: 100;
   width: 250px;
   padding-right: 21px;
   padding-left: 21px;
@@ -148,4 +145,251 @@ $transition-duration: 1500ms;
 
 .site-list__link--current {
   color: $accent-color;
+}
+
+// Модальное окно
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
+
+  background-color: $primary-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 102;
+  overflow-y: auto;
+
+  transform: translate(-50%, -50%) scale(1, 1);
+
+  transition: opacity $transition-duration $transition-function,
+    transform $transition-duration $transition-function,
+    visibility $transition-duration $transition-function,
+    box-shadow $transition-duration $transition-function;
+
+  @media screen and(min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    min-width: 528px;
+  }
+}
+
+.modal-button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  // @extend %alignmentflex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  // border: 1px solid $second-text-color;
+  border: none;
+  background: $primary-white-color;
+  fill: $second-text-color;
+
+  transition: fill $transition-duration $transition-function;
+
+  &:hover,
+  &:focus,
+  &:active {
+    fill: $accent-color;
+
+  }
+}
+
+
+.modal-form__heading {
+  display: box;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: $comment-text-color;
+}
+
+.modal-form__label-for-input {
+  display: flex;
+  flex-direction: column;
+
+  font-style: normal;
+  @include font(12px, 1.167, 0.01em, 400);
+
+  color: $second-text-color;
+  margin-bottom: 10px;
+}
+
+.modal-form__for-input {
+  position: relative;
+  margin-top: 4px;
+}
+
+.modal-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  @include icons(18px, 18px);
+  transition: fill $transition-duration $transition-function;
+}
+
+.modal-form__input {
+  height: 40px;
+  width: 100%;
+  padding-left: 42px;
+
+  border: 1px solid $second-text-color;
+  border-radius: 4px;
+
+  transition: border $transition-duration $transition-function;
+
+  @include font(14px, 1.143, 0.01em, 400);
+
+  @media screen and(min-width: 1200px) {
+    @include font(12px, 1.167, 0.01em, 400);
+  }
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+  &:focus + .modal-form__icon {
+    fill: $accent-color;
+  }
+}
+
+.modal-form__input-comment {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  margin-top: 4px;
+
+  border: 1px solid $second-text-color;
+  border-radius: 4px;
+
+  transition: border $transition-duration $transition-function;
+
+  @include font(14px, 1.143, 0.01em, 400);
+
+  @media screen and(min-width: 1200px) {
+    @include font(12px, 1.167, 0.01em, 400);
+  }
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &::placeholder {
+    color: $accent-color;
+  }
+}
+
+.modal-form__label-checkbox {
+  @include font(14px, 1.714, 0.03em, 400);
+  display: block;
+  font-style: normal;
+  margin-bottom: 30px;
+}
+
+.modal-link {
+  color: $accent-color;
+}
+
+.modal-form__checkbox-icon {
+  display: inline-block;
+  @include icons(16px, 15px);
+  border: 2px solid $accent-color;
+  border-radius: 3px;
+  margin-right: 10px;
+
+  transition: border $transition-duration $transition-function,
+    background-color $transition-duration $transition-function;
+}
+
+.modal-form__checkbox-input:checked + .modal-form__checkbox-icon {
+  border: 0px solid $accent-color;
+  background-color: $accent-color;
+}
+
+.modal-form__label-checkbox:hover
+  > .modal-form__checkbox-input:not(:checked)
+  + .modal-form__checkbox-icon,
+.modal-form__label-checkbox:focus
+  > .modal-form__checkbox-input:not(:checked)
+  + .modal-form__checkbox-icon,
+.modal-form__checkbox-input:focus + .modal-form__checkbox-icon {
+  border: 2px solid $accent-color;
+}
+
+.modal-form__place-for-button {
+  // @extend %alignmentflex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-form__button-submit {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 200px;
+
+  font-family: $primary-font-family;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: $primary-white-color;
+  background-color: $accent-color;
+
+  border-style: none;
+  border-radius: 25px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+  border: 0px solid $accent-color;
+  text-align: center;
+
+  transition: background-color $transition-duration $transition-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.modal-products{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding-left: 0px;
+}
+
+.modal-products__item{
+display: flex;
+align-content: center;
+align-items: center;
+flex-direction: column;
+width: 80px;}
+
+.modal-products__quantity{
+  width: 40px;
+  height: 40px;
 }
