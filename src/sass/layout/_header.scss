@@ -1,10 +1,19 @@
+$header-section-color-transparent: rgba(255, 184, 202, 0.4);
+
 .header {
-  background-color: $header-section-color;
+  background-color: $header-section-color-transparent;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 200;
+
 }
 
 .header-container {
   position: relative;
   padding-top: 6px;
+  padding-bottom: 6px;
   @media screen and(min-width: 768px) {
   display: flex;
   align-items: center;
@@ -16,6 +25,8 @@
 .logo {
   display: flex;
   align-items: center;
+  width: 220px;
+
 }
 
 .logo-icon {
