@@ -1,13 +1,15 @@
-
+$transition-duration-image: 2s;
 
 .hero {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  padding-top: 137px;
+  padding-top: 193px;
   padding-bottom: 160px;
   background-color: $header-section-color;
+
   // background-image: url('../images/header/png/slider_ice_cream_mob.png'),
+
   //   url('../images/circle.svg');
   // @media screen and (min-device-pixel-ratio: 2),
   //   screen and (-webkit-min-device-pixel-ratio: 2),
@@ -59,10 +61,65 @@
   // @media screen and(min-width: 768px) {
   //   background-position: right 192px bottom 0px, right 98px bottom 75px;
   // }
+}
 
+.hero-container {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-imege__girl,
+.hero-imege__milk {
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
+}
+
+.hero-image-thumb {
+  border-radius: 50%;
+  width: 346px;
+  height: 346px;
+  background-color: $color-ellipse;
+  position: absolute;
+  top: -100px;
+  left: 36px;
+  animation: scale;
+  animation-timing-function: $transition-function;
+  animation-duration: $transition-duration-image;
+  z-index: 1;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-imege__ice-cream {
+  position: absolute;
+  left: 81px;
+  display: block;
+  animation-name: appearance;
+  animation-duration: $transition-duration-image;
+  animation-timing-function: $transition-function;
+  transition: transform $transition-duration $transition-function;
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero__heading {
+  position: relative;
+  z-index: 10;
   @include font(48px, 0.965, 0em, 400, left);
   text-transform: uppercase;
   color: $accent-color;
@@ -77,6 +134,9 @@
 }
 
 .hero-link__button {
+  position: relative;
+  z-index: 10;
+
   display: inline-flex;
   height: 24px;
   border-radius: 24px;
@@ -99,8 +159,8 @@
 
 .hero-product,
 .features-cafes,
-.features-food-trucks{
+.features-food-trucks {
   @media screen and(max-width: 767px) {
-  display: none;
+    display: none;
   }
-  }
+}
