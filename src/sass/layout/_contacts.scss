@@ -1,14 +1,16 @@
+.contacts-section {
+  background-image: linear-gradient(to top, $made-color 92%, $primary-white-color 8%);
+}
+
 .contacts-container {
   padding-top: 40px;
-  // padding-right: 50px;
+  padding-right: 50px;
   padding-bottom: 40px;
-  // padding-left: 50px;
+  padding-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  //   flex-flow: row wrap;
-  background-image: linear-gradient(to top, $made-color 92%, $primary-white-color 8%);
 }
 
 .contacts-card {
