@@ -1,0 +1,123 @@
+.link {
+  color: inherit;
+}
+
+.contacts-container {
+  padding-top: 40px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //   flex-flow: row wrap;
+  background-image: linear-gradient(to top, $made-color 92%, $primary-white-color 8%);
+}
+
+.contacts-card {
+  width: 100%;
+  background: $primary-white-color;
+  box-shadow: 0px 8px 30px $location-box-shadow-color;
+  border-radius: 24px;
+  padding: 43px 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.contacts-card__thumb {
+  width: 80px;
+  background-color: $rectangle-color-coffee;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-card__type {
+  @include font(12px, 1.833, 0.04em);
+  color: $primary-white-color;
+  text-transform: uppercase;
+}
+
+.contacts-card__thumb--green {
+  width: 130px;
+  background-color: $rectangle-color-milkshakes;
+}
+
+.contacts-card-place,
+.contacts-card-shedule {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $background-comment-color;
+}
+
+.contacts-card-place__title {
+  @include font(12px, 1.833, 0.04em);
+  color: $comment-text-color;
+}
+
+.contacts-card-place__text,
+.contacts-card-address__item {
+  @include font(12px, 1.833, 0em);
+  color: $second-text-color;
+}
+
+.contacts-card-shedule__day {
+  @include font(12px, 1.833, 0em);
+  color: $comment-text-color;
+}
+
+.contacts-card-shedule__item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts-card-shedule__time {
+  @include font(12px, 1.833, 0em);
+  color: $color-ellipse;
+}
+
+.contacts-card-address {
+  padding-top: 25px;
+}
+
+// BUTTONS
+
+.contacts-buttons-wrapper {
+  margin-top: 54px;
+}
+
+.contacts__button {
+  border-radius: 22px;
+  width: 161px;
+  height: 44px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__button--pink {
+  background-color: $button-color;
+  .contacts__button-text {
+    @include font(16px, 1.313, 0em, 700, center);
+    color: $primary-white-color;
+  }
+}
+
+.contacts__button--white {
+  background-color: $primary-white-color;
+  .contacts__button-text {
+    @include font(16px, 1.313, 0em, 700, center);
+    color: $accent-color;
+  }
+}
