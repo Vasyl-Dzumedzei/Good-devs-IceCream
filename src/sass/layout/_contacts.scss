@@ -84,3 +84,40 @@
 .contacts-card-address {
   padding-top: 25px;
 }
+
+// BUTTONS
+
+.contacts-buttons-wrapper {
+  margin-top: 54px;
+}
+
+.contacts__button {
+  border-radius: 22px;
+  width: 161px;
+  height: 44px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__button--pink {
+  background-color: $button-color;
+  .contacts__button-text {
+    @include font(16px, 1.313, 0em, 700, center);
+    color: $primary-white-color;
+  }
+}
+
+.contacts__button--white {
+  background-color: $primary-white-color;
+  .contacts__button-text {
+    @include font(16px, 1.313, 0em, 700, center);
+    color: $accent-color;
+  }
+}
