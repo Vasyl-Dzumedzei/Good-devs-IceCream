@@ -1,0 +1,118 @@
+.section-about {
+  background-color: $made-color;
+  padding-top: 125px;
+  padding-bottom: 39px;
+
+  background-image: url(../images/about/png/milk_splash_mob.png);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom 100px center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/about/png/milk_splash_mob@2x.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url(../images/about/png/milk_splash_mob@3x.png);
+  }
+}
+.title-label {
+  margin-bottom: 15px;
+
+  font-family: $heading-font-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.166;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $color-ellipse;
+}
+.section-about_title {
+  margin-bottom: 26px;
+
+  line-height: 1.147;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $accent-color;
+}
+.section-about_image {
+  width: 280px;
+  height: 279px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 46px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/about/png/cow_milk_mob.png);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/about/png/cow_milk_mob@2x.png);
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    (-webkit-min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    background-image: url(../images/about/png/cow_milk_mob@3x.png);
+  }
+}
+.section-about_review {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 17px;
+
+  font-family: $primary-font-family;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+  /* or 19px */
+
+  color: $second-text-color;
+}
+
+.section-about--color {
+  color: $comment-text-color;
+  margin-bottom: 33px;
+}
+
+.section-about_button {
+  display: flex;
+  width: 176px;
+  height: 44px;
+
+  margin-left: 30px;
+  padding-left: 37px;
+  padding-right: 56px;
+  background-color: $primary-white-color;
+
+  border: 1px solid transparent;
+  border-radius: 22px;
+  // button text
+  font-family: $primary-font-family;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: $accent-color;
+  text-decoration: none;
+}
