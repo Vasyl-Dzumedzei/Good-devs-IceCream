@@ -1,0 +1,135 @@
+.products-section {
+  padding-top: 121px;
+}
+.products-set {
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    .products-set__item:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.products-name {
+  margin-bottom: 31px;
+}
+
+.pre-title {
+  color: $header-section-color;
+
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-bottom: 15px;
+}
+
+.products-title {
+  color: $accent-color;
+
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 34px;
+  line-height: 39px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  margin-bottom: 31px;
+}
+
+.products-set__data {
+  height: 100vh;
+
+  background-color: $header-section-color;
+  border-radius: 24px;
+
+  padding: 0 40px;
+
+  margin-bottom: 10px;
+}
+
+.products__img {
+  position: relative;
+  top: 100px;
+}
+
+img {
+  display: block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, 50%);
+}
+
+.products-set__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  bottom: 0;
+  align-items: center;
+}
+
+.products-set__title {
+  text-align: center;
+  margin-top: 100px;
+
+  color: $primary-white-color;
+
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.products__description {
+  text-align: center;
+
+  color: $primary-white-color;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 200px;
+}
+
+.products-set__btn {
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.products-set__data--ice-coffe {
+  background-color: $rectangle-color-coffee;
+}
+
+.products-set__data--milkshakes {
+  background-color: $rectangle-color-milkshakes;
+}
