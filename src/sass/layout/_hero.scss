@@ -1,7 +1,4 @@
-@function pow($base) {
-  $result: $base - (346px + 20px);
-  @return $result;
-}
+
 
 .hero {
   margin-left: auto;
@@ -10,31 +7,59 @@
   padding-top: 137px;
   padding-bottom: 160px;
   background-color: $header-section-color;
-  background-image: url('../images/header/png/slider_ice_cream_mob.png'),
-    url('../images/circle.svg');
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url('../images/header/png/slider_ice_cream_mob@2x.png'),
-      url('../images/circle.svg');
-  }
+  // background-image: url('../images/header/png/slider_ice_cream_mob.png'),
+  //   url('../images/circle.svg');
+  // @media screen and (min-device-pixel-ratio: 2),
+  //   screen and (-webkit-min-device-pixel-ratio: 2),
+  //   screen and (min-resolution: 192dpi),
+  //   screen and (min-resolution: 2dppx) {
+  //   background-image: url('../images/header/png/slider_ice_cream_mob@2x.png'),
+  //     url('../images/circle.svg');
+  // }
 
-  @media screen and (min-device-pixel-ratio: 3),
-    screen and (-webkit-min-device-pixel-ratio: 3),
-    screen and (min-resolution: 288dpi),
-    screen and (min-resolution: 3dppx) {
-    background-image: url('../images/header/png/slider_ice_cream_mob@3x.png'),
-      url('../images/circle.svg');
-  }
+  // @media screen and (min-device-pixel-ratio: 3),
+  //   screen and (-webkit-min-device-pixel-ratio: 3),
+  //   screen and (min-resolution: 288dpi),
+  //   screen and (min-resolution: 3dppx) {
+  //   background-image: url('../images/header/png/slider_ice_cream_mob@3x.png'),
+  //     url('../images/circle.svg');
+  // }
 
-  background-repeat: no-repeat;
-  background-size: 171px 410px, 346px 346px;
+  // background-repeat: no-repeat;
+  // background-size: 171px 410px, 346px 346px;
 
-  background-position: left 117px bottom 0px, left 36px bottom 75px;
-  @media screen and(min-width: 480px) {
-    background-position: right 192px bottom 0px, right 98px bottom 75px;
-  }
+  // background-position: left 117px bottom 0px, left 36px bottom 75px;
+  // @media screen and(min-width: 480px) {
+  //   background-position: right 192px bottom 0px, right 98px bottom 75px;
+  // }
+
+  // @media screen and(min-width: 768px) {
+  //   background-image: url('../images/header/png/slider_ice_cream_tab.png'),
+  //   url('../images/circle.svg');
+  // @media screen and (min-device-pixel-ratio: 2),
+  //   screen and (-webkit-min-device-pixel-ratio: 2),
+  //   screen and (min-resolution: 192dpi),
+  //   screen and (min-resolution: 2dppx) {
+  //   background-image: url('../images/header/png/slider_ice_cream_tab@2x.png'),
+  //     url('../images/circle.svg');
+  // }
+
+  // @media screen and (min-device-pixel-ratio: 3),
+  //   screen and (-webkit-min-device-pixel-ratio: 3),
+  //   screen and (min-resolution: 288dpi),
+  //   screen and (min-resolution: 3dppx) {
+  //   background-image: url('../images/header/png/slider_ice_cream_tab@3x.png'),
+  //     url('../images/circle.svg');
+  // }
+  // }
+
+  // background-size: 143px 336px, 324px 324px;
+
+  // background-position: left 348px bottom 0px, left 307px bottom 75px;
+  // @media screen and(min-width: 768px) {
+  //   background-position: right 192px bottom 0px, right 98px bottom 75px;
+  // }
+
 }
 
 .hero__heading {
@@ -71,3 +96,11 @@
   background-color: $primary-white-color;
   color: $accent-color;
 }
+
+.hero-product,
+.features-cafes,
+.features-food-trucks{
+  @media screen and(max-width: 767px) {
+  display: none;
+  }
+  }
