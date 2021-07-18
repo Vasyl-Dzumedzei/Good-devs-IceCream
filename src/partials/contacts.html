@@ -141,7 +141,12 @@
 
     <!-- BUTTONS -->
     <div class="contacts-buttons-wrapper">
-      <button data-modal-open type="button" class="contacts__button button contacts__button--pink">
+      <!-- Our locations -->
+      <button
+        data-modal-open
+        type="button"
+        class="contacts__button--locations button contacts__button--pink"
+      >
         <span class="contacts__button-text"
           >Our Locations
           <svg class="contacts__button-icon--white" width="7" height="10">
@@ -149,7 +154,13 @@
           </svg>
         </span>
       </button>
-      <button data-modal-open type="button" class="contacts__button button contacts__button--white">
+
+      <!-- Franchise -->
+      <button
+        data-modal-open
+        type="button"
+        class="contacts__button--franchise button contacts__button--white"
+      >
         <span class="contacts__button-text"
           >Franchise
           <svg class="contacts__button-icon--pink" width="7" height="10">
@@ -159,14 +170,26 @@
       </button>
     </div>
   </div>
-  
-<!-- MODAL -->
-  <div data-modal class="backdrop is-hidden">
-    <div class="modal">
-        <button data-modal-close type="button" class="modal-button-close">
-            <svg class="modal-icon" width="18px" height="18px">
-                <use href=""></use>
-            </svg>
-        </button>
-</section>
 
+  <!-- LOCATIONS MODAL -->
+  <div data-modal class="backdrop is-hidden">
+    <div class="modal locations-modal">
+      <button data-modal-close type="button" class="modal-button-close">
+        <svg class="modal-icon" width="18px" height="18px">
+          <use href=""></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- FRANCHISE MODAL -->
+  <div data-modal class="backdrop is-hidden">
+    <div class="modal franchise-modal">
+      <button data-modal-close type="button" class="modal-button-close">
+        <svg class="modal-icon" width="18px" height="18px">
+          <use href=""></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
