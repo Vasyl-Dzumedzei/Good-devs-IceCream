@@ -11,9 +11,10 @@ img {
 }
 .container {
   display: flex;
-  width: 320px;
+  min-width: 320px;
   height: 100%;
   align-items: center;
+  justify-content: center;
 }
 
 .gallery_item {
