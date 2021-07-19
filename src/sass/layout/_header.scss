@@ -1,7 +1,7 @@
-// $header-section-color-transparent: rgba(255, 184, 202, 0.4);
+$header-section-color-transparent: rgba(255, 184, 202, 0.1);
 
 .header {
-  // background-color: $header-section-color-transparent;
+  background-color: $header-section-color-transparent;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
