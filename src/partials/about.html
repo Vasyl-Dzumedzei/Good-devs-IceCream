@@ -1,14 +1,30 @@
 <article class="section-about" id="about">
     <div class="container">
         <p class="title-label">tradition and love</p>
-        <h2 class="section-about_title heading">how it’s made?</h2>
-        <div class="section-about_image"></div>
-        <p class="section-about_review section-about--color">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
+        <h2 class="section-about__title heading">how it’s made?</h2>
+        <div class="section-about__image"></div>
+        <p class="section-about__review section-about--color">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
         Maecenas eleifend erat at justo fringilla.</p>
-        <p class="section-about_review">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat.
+        <p class="section-about__review">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat.
         Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.</p>
-        <p class="section-about_review">Aliquam erat volutpat. Aenean accumsan.</p>
+        <p class="section-about__review">Aliquam erat volutpat. Aenean accumsan.</p>
 
-        <a href="" class="section-about_button">Read more</a>
+    
+        <input class="section-about__input" type="checkbox" id="read-more" hidden>
+        <p class="extra-text section-about__review section-about--color">Lorem ipsum dolor sit amet.</p>
+        <p class="extra-text section-about__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Magni aspernatur iste quod perspiciatis sit mollitia totam odit quibusdam pariatur ullam, tempore eius placeat ad culpa iusto consectetur! Dolorum, ipsa eaque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam repellendus cum reprehenderit optio similique accusamus expedita eveniet? Animi tempore commodi fugiat, mollitia sit facilis aperiam nisi, nemo dolorum doloremque expedita?</p>
+        <p class="extra-text section-about__review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore minima ullam soluta temporibus. Tempore, labore! Atque ab dolorum laboriosam omnis debitis id eveniet non, iusto aspernatur, saepe numquam, pariatur velit!</p>
+        <p class="extra-text section-about__review">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum aut eum nesciunt obcaecati vitae accusamus, quis illum quos exercitationem autem.</p>
+
+        
+            <label for="read-more" class="read-more__label">
+                Read
+                <span class="more">more</span>
+                <span class="less">less</span>
+                    <svg class="label-icon" width="7" height="10">
+                        <use href="./images/icons/symbol-defs2.svg#icon-red_arrow_button"></use>
+                    </svg>
+            </label>
     </div>
 </article>

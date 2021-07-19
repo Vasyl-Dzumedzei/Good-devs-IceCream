@@ -36,7 +36,7 @@
 
   color: $color-ellipse;
 }
-.section-about_title {
+.section-about__title {
   margin-bottom: 26px;
 
   line-height: 1.147;
@@ -45,7 +45,7 @@
 
   color: $accent-color;
 }
-.section-about_image {
+.section-about__image {
   width: 280px;
   height: 279px;
   margin-right: auto;
@@ -70,7 +70,7 @@
     background-image: url(../images/about/png/cow_milk_mob@3x.png);
   }
 }
-.section-about_review {
+.section-about__review {
   padding-left: 30px;
   padding-right: 30px;
   margin-bottom: 17px;
@@ -87,32 +87,56 @@
 
 .section-about--color {
   color: $comment-text-color;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
 }
+// button
 
-.section-about_button {
-  display: flex;
-  width: 176px;
-  height: 44px;
+.read-more__label {
+  max-width: 176px;
 
   margin-left: 30px;
-  padding-left: 37px;
-  padding-right: 56px;
-  background-color: $primary-white-color;
+  padding: 11px 37px;
 
+  background-color: $primary-white-color;
   border: 1px solid transparent;
   border-radius: 22px;
-  // button text
+
   font-family: $primary-font-family;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
-
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
   color: $accent-color;
-  text-decoration: none;
+  cursor: pointer;
+}
+
+.extra-text {
+  display: none;
+}
+
+#read-more:checked ~ .extra-text {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.less {
+  display: none;
+}
+
+#read-more:checked ~ .read-more__label .more {
+  display: none;
+}
+#read-more:checked ~ .read-more__label .less {
+  display: inline;
+}
+.label-icon {
+  margin-left: 13px;
+}
+
+// animation
+.section-about__input:hover ~ .read-more__label,
+.section-about__input:focus ~ .read-more__label {
+  background-color: $hover-btn-header-color;
+  color: $primary-white-color;
+  transition: all $transition-duration $transition-function;
 }
