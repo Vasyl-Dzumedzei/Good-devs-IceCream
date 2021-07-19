@@ -1,47 +1,124 @@
-@function pow($base) {
-  $result: $base - (346px + 20px);
-  @return $result;
-}
+$transition-duration-image: 2s;
 
 .hero {
+  // position: relative;
+
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  padding-top: 137px;
+  padding-top: 193px;
   padding-bottom: 160px;
   background-color: $header-section-color;
-  background-image: url('../images/header/png/slider_ice_cream_mob.png'),
-    url('../images/circle.svg');
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url('../images/header/png/slider_ice_cream_mob@2x.png'),
-      url('../images/circle.svg');
+
+  @media screen and(min-width: 768px) {
+    padding-top: 102px;
+    padding-bottom: 34px;
   }
+}
 
-  @media screen and (min-device-pixel-ratio: 3),
-    screen and (-webkit-min-device-pixel-ratio: 3),
-    screen and (min-resolution: 288dpi),
-    screen and (min-resolution: 3dppx) {
-    background-image: url('../images/header/png/slider_ice_cream_mob@3x.png'),
-      url('../images/circle.svg');
+.hero-container {
+  position: relative;
+  padding-left: 34px;
+  padding-right: 34px;
+  z-index: 10;
+}
+
+.hero-imege__girl,
+.hero-imege__milk {
+  @media screen and(max-width: 767px) {
+    display: none;
   }
+}
 
-  background-repeat: no-repeat;
-  background-size: 171px 410px, 346px 346px;
+.hero-image-thumb {
+  border-radius: 50%;
+  width: 346px;
+  height: 346px;
+  background-color: $color-ellipse;
+  position: absolute;
+  top: -110px;
+  left: 36px;
+  animation: scale;
+  animation-timing-function: $transition-function;
+  animation-duration: $transition-duration-image;
+  z-index: 1;
+  @media screen and(min-width: 768px) {
+    width: 323px;
+    height: 323px;
+    top: -71px;
+    left: 307px;
+  }
+}
 
-  background-position: left 117px bottom 0px, left 36px bottom 75px;
-  @media screen and(min-width: 480px) {
-    background-position: right 192px bottom 0px, right 98px bottom 75px;
+@keyframes scale {
+  0% {
+    transform: scale(0.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-imege__ice-cream {
+  position: absolute;
+  left: 81px;
+  display: block;
+  animation-name: appearance;
+  animation-duration: $transition-duration-image;
+  animation-timing-function: $transition-function;
+  transition: transform $transition-duration $transition-function;
+  width: 171px;
+  height: 410px;
+  margin-top: 9px;
+  @media screen and(min-width: 768px) {
+    left: 71px;
+    width: 143px;
+    height: 336px;
+    margin-top: 32px;
+  }
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-imege__milk {
+  @media screen and(min-width: 768px) {
+    width: 124px;
+    height: 126px;
+    position: absolute;
+    bottom: 0;
+    left: 34px;
+  }
+}
+
+.hero-imege__girl {
+  @media screen and(min-width: 768px) {
+    position: absolute;
+    display: block;
+    width: 168px;
+    height: 133px;
+    bottom: -34px;
+    right: 34px;
+    z-index: 20;
   }
 }
 
 .hero__heading {
+  position: relative;
+  z-index: 10;
   @include font(48px, 0.965, 0em, 400, left);
   text-transform: uppercase;
   color: $accent-color;
   margin-bottom: 20px;
+  @media screen and(min-width: 768px) {
+    @include font(34px, 0.965, 0em, 400, left);
+  }
 }
 
 .hero__heading--white {
@@ -49,9 +126,15 @@
   display: inline-block;
   text-transform: uppercase;
   color: $primary-white-color;
+  @media screen and(min-width: 768px) {
+    @include font(22px, 1.145, 0em, 400, left);
+  }
 }
 
 .hero-link__button {
+  position: relative;
+  z-index: 10;
+
   display: inline-flex;
   height: 24px;
   border-radius: 24px;
@@ -59,6 +142,9 @@
   padding-left: 14px;
   padding-right: 14px;
   align-items: center;
+  @media screen and(min-width: 768px) {
+    margin-bottom: 66px;
+  }
 }
 
 .hero-link__button--first {
@@ -70,4 +156,75 @@
 .hero-link__button--secondery {
   background-color: $primary-white-color;
   color: $accent-color;
+}
+
+.hero-product,
+.hero-features-cafes,
+.hero-features-food-trucks {
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
+}
+.hero-features-cafes,
+.hero-features-food-trucks {
+  position: absolute;
+  right: 42px;
+  @include font(8px, 1.303, 0em, 400, center);
+  color: $primary-white-color;
+  &::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $primary-white-color;
+    position: absolute;
+    top: -3px;
+    right: -8px;
+    z-index: 9;
+  }
+}
+
+.hero-features-cafes {
+  top: 0;
+}
+
+.hero-features-food-trucks {
+  top: 50px;
+}
+
+.hero-features-quantity {
+  position: relative;
+  z-index: 9;
+
+  display: block;
+  font-family: $heading-font-family;
+  @include font(28px, 1.145, 0.04em, 400, right);
+  color: $accent-color;
+}
+
+.hero-product {
+  margin-left: 134px;
+  width: 114px;
+}
+
+.hero-product__text {
+  @include font(8px, 1.5, 0em, 400, left);
+  color: $primary-white-color;
+}
+
+.hero-product__link {
+  margin-top: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  background-color: $primary-white-color;
+  border-radius: 50%;
+  color: $accent-color;
+}
+
+.hero-product__icon {
+  @include icons(6px, 6px);
 }
