@@ -1,15 +1,6 @@
 .products-section {
   padding-top: 121px;
 }
-.products-set {
-  @media screen and (min-width: 768px) {
-    display: flex;
-
-    .products-set__item:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
-}
 
 .products-name {
   margin-bottom: 31px;
@@ -28,7 +19,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .products-title {
@@ -45,21 +36,52 @@
 
   margin-bottom: 31px;
 }
+.products-set {
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    .products-set__item:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.products-set__item {
+  padding-top: 113px;
+  // height: 598px;
+
+  // @media screen and (min-width: 768px) {
+  //   height: 589px;
+  // }
+}
 
 .products-set__data {
-  height: 100vh;
+  position: relative;
 
   background-color: $header-section-color;
   border-radius: 24px;
 
-  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  // bottom: 0;
 
-  margin-bottom: 10px;
+  align-items: center;
+
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+
+  height: 485px;
+
+  margin-bottom: 17px;
+
+  // height: 100%;
 }
 
 .products__img {
-  position: relative;
-  top: 100px;
+  position: absolute;
+  top: -113px;
 }
 
 img {
@@ -74,17 +96,8 @@ img {
   // transform: translate(-50%, 50%);
 }
 
-.products-set__data {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  bottom: 0;
-  align-items: center;
-}
-
 .products-set__title {
   text-align: center;
-  margin-top: 100px;
 
   color: $primary-white-color;
 
@@ -98,6 +111,7 @@ img {
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .products__description {
@@ -117,6 +131,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   min-width: 200px;
+
+  margin-bottom: 30px;
 }
 
 .products-set__btn {
@@ -139,6 +155,8 @@ img {
   height: 7px;
 
   position: relative;
+
+  margin-bottom: 30px;
 }
 .pseudo::after {
   content: '';
