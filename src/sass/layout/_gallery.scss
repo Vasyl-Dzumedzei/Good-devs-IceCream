@@ -20,7 +20,8 @@
 }
 
 .gallery__image:hover .picture {
-  transform: scale(1.5);
+  transform: scale(1.2);
+  transition: transform $transition-duration $transition-function;
 }
 
 .gallery__item--flex {
