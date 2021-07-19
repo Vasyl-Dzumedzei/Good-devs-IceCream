@@ -151,3 +151,14 @@ img {
 
   box-shadow: 8px 0 0 0 $primary-white-color, 16px 0 0 0 $primary-white-color;
 }
+
+.products-set__next-svg {
+  background-color: none;
+}
+
+.products-set__next-svg {
+  fill: $accent-color;
+  align-items: center;
+  background-color: $primary-white-color;
+  border-radius: 50%;
+}
