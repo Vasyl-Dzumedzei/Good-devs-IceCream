@@ -2,3 +2,29 @@
   min-height: 122px;
   background-image: linear-gradient(to bottom, $made-color 50%, $primary-white-color 50%);
 }
+
+.gallery {
+  display: flex;
+  width: 320px;
+  height: 100%;
+  align-items: center;
+}
+
+.picture {
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.gallery__image:hover .picture {
+  transform: scale(1.5);
+}
+
+.gallery__item--flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
