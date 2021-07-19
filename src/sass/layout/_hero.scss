@@ -1,7 +1,7 @@
 $transition-duration-image: 2s;
 
 .hero {
-  position: relative;
+  // position: relative;
 
   margin-left: auto;
   margin-right: auto;
@@ -14,66 +14,14 @@ $transition-duration-image: 2s;
     padding-top: 102px;
     padding-bottom: 34px;
   }
-
-  // background-image: url('../images/header/png/slider_ice_cream_mob.png'),
-
-  //   url('../images/circle.svg');
-  // @media screen and (min-device-pixel-ratio: 2),
-  //   screen and (-webkit-min-device-pixel-ratio: 2),
-  //   screen and (min-resolution: 192dpi),
-  //   screen and (min-resolution: 2dppx) {
-  //   background-image: url('../images/header/png/slider_ice_cream_mob@2x.png'),
-  //     url('../images/circle.svg');
-  // }
-
-  // @media screen and (min-device-pixel-ratio: 3),
-  //   screen and (-webkit-min-device-pixel-ratio: 3),
-  //   screen and (min-resolution: 288dpi),
-  //   screen and (min-resolution: 3dppx) {
-  //   background-image: url('../images/header/png/slider_ice_cream_mob@3x.png'),
-  //     url('../images/circle.svg');
-  // }
-
-  // background-repeat: no-repeat;
-  // background-size: 171px 410px, 346px 346px;
-
-  // background-position: left 117px bottom 0px, left 36px bottom 75px;
-  // @media screen and(min-width: 480px) {
-  //   background-position: right 192px bottom 0px, right 98px bottom 75px;
-  // }
-
-  // @media screen and(min-width: 768px) {
-  //   background-image: url('../images/header/png/slider_ice_cream_tab.png'),
-  //   url('../images/circle.svg');
-  // @media screen and (min-device-pixel-ratio: 2),
-  //   screen and (-webkit-min-device-pixel-ratio: 2),
-  //   screen and (min-resolution: 192dpi),
-  //   screen and (min-resolution: 2dppx) {
-  //   background-image: url('../images/header/png/slider_ice_cream_tab@2x.png'),
-  //     url('../images/circle.svg');
-  // }
-
-  // @media screen and (min-device-pixel-ratio: 3),
-  //   screen and (-webkit-min-device-pixel-ratio: 3),
-  //   screen and (min-resolution: 288dpi),
-  //   screen and (min-resolution: 3dppx) {
-  //   background-image: url('../images/header/png/slider_ice_cream_tab@3x.png'),
-  //     url('../images/circle.svg');
-  // }
-  // }
-
-  // background-size: 143px 336px, 324px 324px;
-
-  // background-position: left 348px bottom 0px, left 307px bottom 75px;
-  // @media screen and(min-width: 768px) {
-  //   background-position: right 192px bottom 0px, right 98px bottom 75px;
-  // }
 }
 
-// .hero-container {
-//   position: relative;
-//   z-index: 10;
-// }
+.hero-container {
+  position: relative;
+  padding-left: 34px;
+  padding-right: 34px;
+  z-index: 10;
+}
 
 .hero-imege__girl,
 .hero-imege__milk {
@@ -88,7 +36,7 @@ $transition-duration-image: 2s;
   height: 346px;
   background-color: $color-ellipse;
   position: absolute;
-  top: 83px;
+  top: -110px;
   left: 36px;
   animation: scale;
   animation-timing-function: $transition-function;
@@ -97,7 +45,7 @@ $transition-duration-image: 2s;
   @media screen and(min-width: 768px) {
     width: 323px;
     height: 323px;
-    top: 31px;
+    top: -71px;
     left: 307px;
   }
 }
@@ -144,19 +92,18 @@ $transition-duration-image: 2s;
     width: 124px;
     height: 126px;
     position: absolute;
-    bottom: 28px;
-    left: 34;
+    bottom: 0;
+    left: 34px;
   }
 }
 
 .hero-imege__girl {
   @media screen and(min-width: 768px) {
     position: absolute;
-
-    width: 124px;
-    height: 126px;
-    bottom: 0;
-    // left: 566px;
+    display: block;
+    width: 168px;
+    height: 133px;
+    bottom: -34px;
     right: 34px;
     z-index: 20;
   }
@@ -169,6 +116,9 @@ $transition-duration-image: 2s;
   text-transform: uppercase;
   color: $accent-color;
   margin-bottom: 20px;
+  @media screen and(min-width: 768px) {
+    @include font(34px, 0.965, 0em, 400, left);
+  }
 }
 
 .hero__heading--white {
@@ -176,6 +126,9 @@ $transition-duration-image: 2s;
   display: inline-block;
   text-transform: uppercase;
   color: $primary-white-color;
+  @media screen and(min-width: 768px) {
+    @include font(22px, 1.145, 0em, 400, left);
+  }
 }
 
 .hero-link__button {
@@ -189,6 +142,9 @@ $transition-duration-image: 2s;
   padding-left: 14px;
   padding-right: 14px;
   align-items: center;
+  @media screen and(min-width: 768px) {
+    margin-bottom: 66px;
+  }
 }
 
 .hero-link__button--first {
@@ -203,9 +159,72 @@ $transition-duration-image: 2s;
 }
 
 .hero-product,
-.features-cafes,
-.features-food-trucks {
+.hero-features-cafes,
+.hero-features-food-trucks {
   @media screen and(max-width: 767px) {
     display: none;
   }
+}
+.hero-features-cafes,
+.hero-features-food-trucks {
+  position: absolute;
+  right: 42px;
+  @include font(8px, 1.303, 0em, 400, center);
+  color: $primary-white-color;
+  &::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $primary-white-color;
+    position: absolute;
+    top: -3px;
+    right: -8px;
+    z-index: 9;
+  }
+}
+
+.hero-features-cafes {
+  top: 0;
+}
+
+.hero-features-food-trucks {
+  top: 50px;
+}
+
+.hero-features-quantity {
+  position: relative;
+  z-index: 9;
+
+  display: block;
+  font-family: $heading-font-family;
+  @include font(28px, 1.145, 0.04em, 400, right);
+  color: $accent-color;
+}
+
+.hero-product {
+  margin-left: 134px;
+  width: 114px;
+}
+
+.hero-product__text {
+  @include font(8px, 1.5, 0em, 400, left);
+  color: $primary-white-color;
+}
+
+.hero-product__link {
+  margin-top: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  background-color: $primary-white-color;
+  border-radius: 50%;
+  color: $accent-color;
+}
+
+.hero-product__icon {
+  @include icons(6px, 6px);
 }
