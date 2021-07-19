@@ -1,7 +1,7 @@
 .contacts-section {
   background-image: linear-gradient(to top, $made-color 92%, $primary-white-color 8%);
 }
-.contacts-container {
+.contacts-container.container {
   padding-top: 40px;
   padding-right: 50px;
   padding-bottom: 40px;
@@ -10,6 +10,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.contacts-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-bottom: 0;
+  }
 }
 
 .contacts-card {
@@ -21,6 +28,13 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
 }
 
