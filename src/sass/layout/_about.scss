@@ -131,6 +131,12 @@
 }
 .label-icon {
   margin-left: 13px;
+  fill: none;
+  stroke: $accent-color;
+}
+.read-more__label:hover .label-icon {
+  stroke: $primary-white-color;
+  transition: stroke $transition-duration $transition-function;
 }
 
 // animation
