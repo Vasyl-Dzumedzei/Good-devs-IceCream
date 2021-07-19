@@ -1,27 +1,13 @@
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .advantages {
   padding-bottom: 97px;
   background-color: $made-color;
 
-  &_item:not(:last-child) {
+  &__item:not(:last-child) {
     margin-bottom: 38px;
   }
 }
 
-.advantages_number {
+.advantages__number {
   margin-bottom: 18px;
 
   font-family: $heading-font-family;
@@ -36,8 +22,8 @@
   &::before {
     content: '';
     display: block;
-    //   прибрати пізніше
-    outline: 2px solid red;
+    background-image: url(../images/icons/glass_milk.svg);
+    background-repeat: no-repeat;
     margin-bottom: 16px;
 
     width: 33px;
@@ -45,14 +31,16 @@
   }
   &--apples::before {
     width: 50px;
+    background-image: url(../images/icons/glass_fruit.svg);
   }
 
   &--lollipop::before {
     width: 44px;
+    background-image: url(../images/icons/ice_cream.svg);
   }
 }
 
-.advantages_text {
+.advantages__text {
   max-width: 230px;
 
   font-family: $primary-font-family;
