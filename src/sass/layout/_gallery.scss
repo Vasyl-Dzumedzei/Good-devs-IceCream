@@ -3,9 +3,49 @@
   background-image: linear-gradient(to bottom, $made-color 50%, $primary-white-color 50%);
 }
 
-.gallery-section_image {
+// Варіант 1
+img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+}
+.container {
+  display: flex;
+  width: 320px;
+  height: 100%;
   align-items: center;
 }
+
+.gallery_item {
+  min-width: 40px;
+  height: 100%;
+  /* display: grid;
+  gap: 8px;
+  position: relative; */
+}
+.gallery_image {
+  width: 100%;
+  height: 100%;
+}
+
+.picture {
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.gallery_image:hover .picture {
+  transform: scale(1.5);
+}
+
+// Варіант 2
+// .gallery-section_image {
+//   display: block;
+//   max-width: 100%;
+//   height: auto;
+//   align-items: center;
+// }
