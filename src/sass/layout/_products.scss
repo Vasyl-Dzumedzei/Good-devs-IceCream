@@ -78,6 +78,9 @@
 
 .products-set__item {
   padding-top: 113px;
+
+  overflow: hidden;
+
   // height: 598px;
 
   // @media screen and (min-width: 768px) {
@@ -199,10 +202,12 @@
 }
 
 .products-set__btn {
-  border-radius: 50%;
   border: none;
-  width: 40px;
-  height: 40px;
+  // width: 40px;
+  // height: 40px;
+  padding: 10px 10px 0px 0px;
+  border-radius: 50%;
+  background-color: white;
 
   margin-bottom: 40px;
 
@@ -229,6 +234,8 @@
 .products-set__next-svg {
   @include icons(20px, 20px, $accent-color);
   margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
   border-radius: 50%;
 }
 
@@ -237,7 +244,7 @@
 
   padding: 20px 20px;
 
-  background-image: url(../images/header/png/slider_girl_tab.png);
+  background-image: url(../images/header/png/slider_girl_desk.png);
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
@@ -263,6 +270,7 @@
 .products-overlay__descr {
   position: absolute;
   top: 40px;
+  left: 50px;
   text-align: center;
 
   color: $primary-white-color;
@@ -290,13 +298,15 @@
   font-weight: normal;
   font-size: 34px;
   line-height: 39px;
-  text-align: center;
+
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
   @media screen and (min-width: 768px) {
-    font-size: 48px;
-    line-height: 55px;
+    font-size: 30px;
+    line-height: 39px;
+    margin-left: 0;
+    float: left;
   }
 
   @media screen and (min-width: 1200px) {
@@ -309,7 +319,7 @@
 
 .products-consist {
   position: absolute;
-  top: 80px;
+  top: 100px;
   left: 40%;
 
   color: white;
@@ -326,6 +336,10 @@
 
   text-align: center;
   letter-spacing: 0.04em;
+
+  @media screen and (min-width: 768px) {
+    top: 130px;
+  }
 }
 
 .products-consist__item {
@@ -341,4 +355,8 @@
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
 }
