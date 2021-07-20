@@ -147,13 +147,10 @@
 
 .modal-form__label-checkbox {
   @include font(14px, 1.714, 0.03em, 400);
-  display: block;
+  display: flex;
+  align-items: center;
   font-style: normal;
   margin-bottom: 30px;
-}
-
-.modal-link {
-  color: $accent-color;
 }
 
 .modal-form__checkbox-icon {
