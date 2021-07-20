@@ -1,7 +1,33 @@
 .contacts-section {
   background-image: linear-gradient(to top, $made-color 92%, $primary-white-color 8%);
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(to top, $made-color 85%, $primary-white-color 15%);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/contacts/contacts_splash_desk.png),
+      linear-gradient(to top, $made-color 95%, $primary-white-color 5%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top 102px center;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/contacts_splash_desk@2x.png);
+    }
+
+    @media screen and (min-device-pixel-ratio: 3),
+      (-webkit-min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      background-image: url(../images/contacts/contacts_splash_desk@3x.png);
+    }
+  }
 }
-.contacts-container {
+
+.contacts-container.container {
   padding-top: 40px;
   padding-right: 50px;
   padding-bottom: 40px;
@@ -10,6 +36,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 34px;
+    padding-left: 34px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-right: 115px;
+    padding-left: 115px;
+  }
+}
+
+.contacts-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-bottom: 0;
+  }
 }
 
 .contacts-card {
@@ -17,69 +59,178 @@
   background: $primary-white-color;
   box-shadow: 0px 8px 30px $location-box-shadow-color;
   border-radius: 24px;
-  padding: 43px 20px;
+  padding-top: 43px;
+  padding-right: 20px;
+  padding-bottom: 43px;
+  padding-left: 20px;
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform $transition-duration $transition-function;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 50px;
+    padding-right: 31px;
+    padding-bottom: 50px;
+    padding-left: 31px;
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 50px;
+    padding-right: 43px;
+    padding-bottom: 62px;
+    padding-left: 43px;
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 31px;
+    }
   }
 }
 
 .contacts-card__thumb {
   width: 80px;
+  height: 16px;
+
   background-color: $rectangle-color-coffee;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform $transition-duration $transition-function;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 73px;
+    height: 28px;
+  }
+}
+
+.contacts-card__thumb--green {
+  width: 130px;
+  height: 16px;
+  background-color: $rectangle-color-milkshakes;
+
+  @media screen and (min-width: 768px) {
+    width: 138px;
+    height: 28px;
+  }
 }
 
 .contacts-card__type {
   @include font(12px, 1.833, 0.04em);
   color: $primary-white-color;
   text-transform: uppercase;
-}
 
-.contacts-card__thumb--green {
-  width: 130px;
-  background-color: $rectangle-color-milkshakes;
+  @media screen and (min-width: 768px) {
+    @include font(16px, 1.875, 0.04em);
+  }
 }
 
 .contacts-card-place,
 .contacts-card-shedule {
+  width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
+
   border-bottom: 1px solid $background-comment-color;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contacts-card-place__title {
+  margin-bottom: 10px;
   @include font(12px, 1.833, 0.04em);
   color: $comment-text-color;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 14px;
+    @include font(16px, 1.875, 0.04em);
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 10px;
+    @include font(16px, 1.875, 0.04em);
+  }
 }
 
 .contacts-card-place__text,
 .contacts-card-address__item {
   @include font(12px, 1.833, 0em);
   color: $second-text-color;
-}
 
-.contacts-card-shedule__day {
-  @include font(12px, 1.833, 0em);
-  color: $comment-text-color;
+  @media screen and (min-width: 768px) {
+    @include font(14px, 1.642, 0em);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include font(14px, 1.812, 0em);
+  }
 }
 
 .contacts-card-shedule__item {
   &:not(:last-child) {
     margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.contacts-card-shedule__day {
+  @include font(12px, 1.833, 0em);
+  color: $comment-text-color;
+
+  @media screen and (min-width: 768px) {
+    @include font(14px, 1.857, 0em);
   }
 }
 
 .contacts-card-shedule__time {
-  @include font(12px, 1.833, 0em);
+  @include font(12px, 1.857, 0em);
   color: $color-ellipse;
+
+  @media screen and (min-width: 768px) {
+    @include font(14px, 1.857, -0.01em);
+  }
 }
 
 .contacts-card-address {
   padding-top: 25px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 30px;
+  }
+}
+
+.contacts-card-address__item {
+  &:hover {
+    color: $accent-color;
+    transition: color $transition-duration $transition-function;
+  }
 }
 
 .contacts-card-address__phone,
@@ -90,22 +241,60 @@
 // BUTTONS
 
 .contacts-buttons-wrapper {
+  // width: 100%;
   margin-top: 54px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 80;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .contacts__button--locations,
 .contacts__button--franchise {
   border-radius: 22px;
-  width: 161px;
-  height: 44px;
+  // width: 161px;
+  // height: 44px;
   border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // padding: 11.5px 17px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   text-align: center;
 
   &:not(:last-child) {
     margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+  }
+}
+
+.contacts__button--locations {
+  padding: 11.5px 17px;
+
+  @media screen and (min-width: 768px) {
+    padding: 11.5px 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 11.5px 35.5px;
+  }
+}
+
+.contacts__button--franchise {
+  padding: 11.5px 31.5px;
+
+  @media screen and (min-width: 768px) {
+    padding: 11.5px 38px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 11.5px 39.5px;
   }
 }
 
