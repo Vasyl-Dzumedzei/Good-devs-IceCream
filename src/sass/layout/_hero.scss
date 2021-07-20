@@ -45,6 +45,13 @@ $transition-duration-image: 2s;
     top: -71px;
     left: 307px;
   }
+
+  @media screen and(min-width: 1280px) {
+    width: 538px;
+    height: 538px;
+    top: -119px;
+    left: 475px;
+  }
 }
 
 @keyframes scale {
@@ -70,9 +77,14 @@ $transition-duration-image: 2s;
     width: 323px;
     height: 323px;
   }
+
+  @media screen and(min-width: 1280px) {
+    width: 538px;
+    height: 538px;
+  }
 }
 
-.hero-imege__ice-cream {
+.hero-image__ice-cream {
   position: absolute;
   top: -101px;
   left: 117px;
@@ -85,10 +97,17 @@ $transition-duration-image: 2s;
   height: 410px;
   z-index: 2;
   @media screen and(min-width: 768px) {
-    top: -39px;
+    top: -63px;
     left: 378px;
     width: 143px;
     height: 336px;
+  }
+
+  @media screen and(min-width: 1280px) {
+    top: -63px;
+    left: 594px;
+    width: 236px;
+    height: 557px;
   }
 }
 
