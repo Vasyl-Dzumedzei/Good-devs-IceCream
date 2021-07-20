@@ -97,14 +97,14 @@ $transition-duration-image: 2s;
   height: 410px;
   z-index: 2;
   @media screen and(min-width: 768px) {
-    top: -63px;
+    top: -39px;
     left: 378px;
     width: 143px;
     height: 336px;
   }
 
   @media screen and(min-width: 1280px) {
-    top: -63px;
+    top: -61px;
     left: 594px;
     width: 236px;
     height: 557px;
@@ -232,18 +232,13 @@ $transition-duration-image: 2s;
   }
 }
 
-.hero-product,
-.hero-features-cafes,
-.hero-features-food-trucks {
-  @media screen and(max-width: 767px) {
-    display: none;
-  }
-}
 .hero-features-cafes,
 .hero-features-food-trucks {
   position: absolute;
-  right: 42px;
-  @include font(8px, 1.303, 0em, 400, center);
+  display: block;
+  width: 51px;
+  left: 682px;
+  @include font(8px, 1.303, 0em, 400, right);
   color: $primary-white-color;
   &::before {
     content: '';
@@ -253,26 +248,42 @@ $transition-duration-image: 2s;
     border-radius: 50%;
     background-color: $primary-white-color;
     position: absolute;
-    top: -3px;
+    top: -2px;
     right: -8px;
     z-index: 9;
   }
 
   @media screen and(min-width: 1280px) {
-    @include font(14px, 1.303, 0em, 400, center);
+    @include font(14px, 1.303, 0em, 400, right);
+    width: 92px;
+    left: 1091px;
+
     &::before {
       width: 30px;
       height: 30px;
+      top: -4px;
+      right: -18px;
     }
   }
 }
 
 .hero-features-cafes {
-  top: 0;
+  top: -6px;
 }
 
 .hero-features-food-trucks {
   top: 50px;
+  @media screen and(min-width: 1280px) {
+    top: 80px;
+  }
+}
+
+.hero-product,
+.hero-features-cafes,
+.hero-features-food-trucks {
+  @media screen and(max-width: 767px) {
+    display: none;
+  }
 }
 
 .hero-features-quantity {
