@@ -1,4 +1,4 @@
-$header-section-color-transparent: rgba(255, 184, 202, 0.1);
+$header-section-color-transparent: rgba(255, 184, 202, 0.4);
 
 .header {
   background-color: $header-section-color-transparent;
@@ -11,15 +11,12 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
 
 .header-container {
   position: relative;
-  padding-top: 6px;
-  padding-bottom: 6px;
   @media screen and(min-width: 768px) {
     display: flex;
-    align-items: center;
-    padding-top: 37px;
-    padding-bottom: 15px;
-    padding-right: 34px;
-    padding-left: 34px;
+  }
+  @media screen and(min-width: 1280px) {
+    padding-left: 45px;
+    max-width: 1350px;
   }
 }
 
@@ -27,6 +24,13 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
   display: flex;
   align-items: center;
   width: 220px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  @media screen and(min-width: 768px) {
+    padding-top: 37px;
+    padding-bottom: 15px;
+  }
 }
 
 .logo-icon {
@@ -53,13 +57,13 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
 
   cursor: pointer;
 
-  @media screen and(min-width: 1200px) {
+  @media screen and(min-width: 1280px) {
     display: none;
   }
 }
 
 .open-menu {
-  @media screen and(min-width: 768px) {
+  @media screen and(min-width: 768px) and(max-width: 1279px) {
     top: 52px;
     right: 224px;
   }
@@ -74,10 +78,11 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
   top: 0;
   right: 0;
   display: flex;
-  width: 100%;
 
-  @media screen and(max-width: 1199px) {
+  @media screen and(max-width: 1279px) {
     position: fixed;
+    width: 100%;
+
     flex-direction: column;
     padding: 0;
     padding-top: 60px;
@@ -105,19 +110,10 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
     padding-top: 37px;
   }
 
-  @media screen and(min-width: 1200px) {
-    position: fixed;
-
+  @media screen and(min-width: 1280px) {
     position: static;
-    justify-content: flex-start;
-    flex-direction: row;
-
-    padding-right: 0px;
-    padding-left: 0px;
     padding-top: 0px;
-    padding-bottom: 0px;
-    height: 100%;
-    z-index: 1;
+    margin-left: 110px;
   }
 }
 
@@ -153,12 +149,9 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
     width: 210px;
   }
 
-  @media screen and(min-width: 768px) and(max-width: 1199px) {
-    width: 160px;
-  }
-
   @media screen and(min-width: 768px) {
     margin-bottom: 0px;
+    width: 160px;
   }
 }
 .button-order {
@@ -169,12 +162,18 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
   @media screen and(min-width: 768px) {
     margin-bottom: 0px;
     margin-left: auto;
-    border: 1px solid $header-section-color;
+    margin-top: 37px;
+    transition: background-color $transition-duration $transition-function;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $hover-btn-header-color-second;
   }
 }
 
 .button-order-mobile {
-  @media screen and(min-width: 1200px) {
+  @media screen and(min-width: 1280px) {
     display: none;
   }
 }
@@ -186,7 +185,7 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
 }
 
 .site-list {
-  @media screen and(min-width: 120 px) {
+  @media screen and(min-width: 1280px) {
     display: flex;
   }
 }
@@ -196,14 +195,27 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
   &:last-child {
     border-bottom: 1px solid #e18298;
   }
+  @media screen and(min-width: 1280px) {
+    border-top: none;
+    margin-right: 35px;
+    &:last-child {
+      border-bottom: none;
+      margin-right: 0px;
+    }
+  }
 }
 
 .site-list__link {
   display: inline-block;
   padding-top: 12px;
   padding-bottom: 12px;
-  @include font(14px, 1.286, 0.04em, 700, left);
+  @include font(14px, 1.302, 0.04em, 700, left);
   color: $primary-white-color;
+  @media screen and(min-width: 1280px) {
+    @include font(16px, 1.302, 0.04em, 700, left);
+    padding-top: 50px;
+    padding-bottom: 15px;
+  }
 }
 
 .site-list__link--current {
@@ -238,7 +250,7 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
     width: 450px;
   }
 
-  @media screen and(min-width: 1200px) {
+  @media screen and(min-width: 1280px) {
     min-width: 528px;
   }
 }
@@ -317,7 +329,7 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
 
   @include font(14px, 1.143, 0.01em, 400);
 
-  @media screen and(min-width: 1200px) {
+  @media screen and(min-width: 1280px) {
     @include font(12px, 1.167, 0.01em, 400);
   }
 
@@ -346,7 +358,7 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.1);
 
   @include font(14px, 1.143, 0.01em, 400);
 
-  @media screen and(min-width: 1200px) {
+  @media screen and(min-width: 1280px) {
     @include font(12px, 1.167, 0.01em, 400);
   }
 
