@@ -12,12 +12,15 @@ $transition-duration-image: 2s;
     padding-top: 102px;
     padding-bottom: 34px;
   }
+
+  @media screen and(min-width: 1280px) {
+    padding-top: 171px;
+    padding-bottom: 56px;
+  }
 }
 
 .hero-container {
   position: relative;
-  padding-left: 34px;
-  padding-right: 34px;
   z-index: 10;
 }
 
@@ -103,8 +106,15 @@ $transition-duration-image: 2s;
     width: 124px;
     height: 126px;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 34px;
+  }
+
+  @media screen and(min-width: 1280px) {
+    width: 188px;
+    height: 191px;
+    bottom: 45;
+    left: 38px;
   }
 }
 
@@ -117,6 +127,13 @@ $transition-duration-image: 2s;
     bottom: -34px;
     right: 34px;
     z-index: 20;
+
+    @media screen and(min-width: 1280px) {
+      width: 293px;
+      height: 232px;
+      bottom: -56px;
+      right: 109px;
+    }
   }
 }
 
@@ -130,6 +147,10 @@ $transition-duration-image: 2s;
   @media screen and(min-width: 768px) {
     @include font(34px, 0.965, 0em, 400, left);
   }
+  @media screen and(min-width: 1280px) {
+    @include font(58px, 0.965, 0em, 400, left);
+    margin-bottom: 25px;
+  }
 }
 
 .hero__heading--white {
@@ -139,6 +160,9 @@ $transition-duration-image: 2s;
   color: $primary-white-color;
   @media screen and(min-width: 768px) {
     @include font(22px, 1.145, 0em, 400, left);
+  }
+  @media screen and(min-width: 1280px) {
+    @include font(38px, 1.145, 0em, 400, left);
   }
 }
 
@@ -153,8 +177,15 @@ $transition-duration-image: 2s;
   padding-left: 14px;
   padding-right: 14px;
   align-items: center;
+
+  transition: background-color $transition-duration $transition-function;
   @media screen and(min-width: 768px) {
     margin-bottom: 66px;
+  }
+  @media screen and(min-width: 1280px) {
+    margin-bottom: 112px;
+    @include font(14px, 1.303, 0em, 400, center);
+    height: 40px;
   }
 }
 
@@ -162,11 +193,24 @@ $transition-duration-image: 2s;
   background-color: $accent-color;
   color: $primary-white-color;
   margin-right: 8px;
+  @media screen and(min-width: 1280px) {
+    margin-right: 17px;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $hover-btn-header-color;
+  }
 }
 
 .hero-link__button--secondery {
   background-color: $primary-white-color;
   color: $accent-color;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $hover-btn-header-color-second;
+  }
 }
 
 .hero-product,
@@ -194,6 +238,14 @@ $transition-duration-image: 2s;
     right: -8px;
     z-index: 9;
   }
+
+  @media screen and(min-width: 1280px) {
+    @include font(14px, 1.303, 0em, 400, center);
+    &::before {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
 .hero-features-cafes {
@@ -212,16 +264,28 @@ $transition-duration-image: 2s;
   font-family: $heading-font-family;
   @include font(28px, 1.145, 0.04em, 400, right);
   color: $accent-color;
+
+  @media screen and(min-width: 1280px) {
+    @include font(46px, 1.145, 0.04em, 400, right);
+  }
 }
 
 .hero-product {
   margin-left: 134px;
   width: 114px;
+  @media screen and(min-width: 1280px) {
+    width: 200px;
+    margin-left: 180px;
+  }
 }
 
 .hero-product__text {
   @include font(8px, 1.5, 0em, 400, left);
   color: $primary-white-color;
+
+  @media screen and(min-width: 1280px) {
+    @include font(14px, 1.4, 0em, 400, left);
+  }
 }
 
 .hero-product__link {
@@ -234,8 +298,24 @@ $transition-duration-image: 2s;
   background-color: $primary-white-color;
   border-radius: 50%;
   color: $accent-color;
+  transition: background-color $transition-duration $transition-function;
+
+  @media screen and(min-width: 1280px) {
+    margin-top: 20px;
+    width: 26px;
+    height: 26px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $hover-btn-header-color-second;
+  }
 }
 
 .hero-product__icon {
   @include icons(6px, 6px);
+  @media screen and(min-width: 1280px) {
+    @include icons(9px, 9px);
+  }
 }
