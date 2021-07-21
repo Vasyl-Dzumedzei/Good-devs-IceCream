@@ -9,6 +9,12 @@
   background-repeat: no-repeat;
   background-position: bottom 100px center;
 
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 130px;
+    padding-bottom: 66px;
+    background-image: none;
+  }
+
   @media screen and (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -35,6 +41,21 @@
   text-transform: uppercase;
 
   color: $color-ellipse;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 15px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-about__flex-box {
+    display: flex;
+  }
+  .section-about__text {
+    width: 340px;
+  }
 }
 .section-about__title {
   margin-bottom: 26px;
