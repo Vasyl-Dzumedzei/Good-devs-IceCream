@@ -82,3 +82,18 @@
 .list__team-social-list {
   margin: 30px 123px 86px 123px;
 }
+
+.customer-reviews_html {
+  padding-top: 80px;
+  padding-bottom: 86px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 121px;
+    padding-bottom: 119px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 123px;
+    padding-bottom: 132px;
+  }
+}
