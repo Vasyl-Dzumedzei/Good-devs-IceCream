@@ -43,6 +43,13 @@
     @include font(26px, 1.1538, 0.04em, normal, left);
   }
 }
+.footer-block__link {
+  color: $color-ellipse;
+  cursor: pointer;
+  list-style-type: none;
+  text-decoration: none;
+}
+
 /*.footer-block__text:hover .footer-block__text-logo {
     transform: translateY(0);
 }*/
