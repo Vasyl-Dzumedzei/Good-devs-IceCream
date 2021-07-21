@@ -3,32 +3,40 @@
   @media screen and (min-width: 768px) {
     padding-bottom: 112px;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 127px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .products-name {
   margin-bottom: 31px;
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 50px;
+  }
 }
 
 .pre-title {
   color: $header-section-color;
-
   font-family: 'Titan One';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
-  /* identical to box height */
-
-  text-align: center;
   text-transform: uppercase;
-
   margin-bottom: 15px;
+
+  @include font(18px, 1.17, 0.04em, normal, center);
+  // font-style: normal;
+  // font-weight: normal;
+  // font-size: 18px;
+  // line-height: 21px;
+  // text-align: center;
 
   @media screen and (min-width: 768px) {
     font-size: 26px;
     line-height: 30px;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 30px;
     line-height: 35px;
   }
@@ -36,28 +44,26 @@
 
 .products-title {
   color: $accent-color;
-
   font-family: 'Titan One';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 34px;
-  line-height: 39px;
-  text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
-
   margin-bottom: 31px;
+
+  @include font(34px, 39px, 0.04em, normal, center);
+  // font-style: normal;
+  // font-weight: normal;
+  // font-size: 34px;
+  // line-height: 39px;
+  // text-align: center;
+  // letter-spacing: 0.04em;
 
   @media screen and (min-width: 768px) {
     font-size: 48px;
     line-height: 55px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 58px;
     line-height: 66px;
-
-    margin-bottom: 50px;
   }
 }
 .products-set {
@@ -69,7 +75,7 @@
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     .products-set__item:not(:last-child) {
       margin-right: 30px;
     }
@@ -81,11 +87,13 @@
 
   overflow: hidden;
 
-  // height: 598px;
+  @media screen and (min-width: 768px) {
+    padding-top: 104px;
+  }
 
-  // @media screen and (min-width: 768px) {
-  //   height: 589px;
-  // }
+  @media screen and (min-width: 1280px) {
+    padding-top: 210px;
+  }
 }
 
 .products-set__data {
@@ -96,8 +104,6 @@
 
   display: flex;
   flex-direction: column;
-  // justify-content: flex-end;
-  // bottom: 0;
 
   align-items: center;
 
@@ -110,35 +116,37 @@
   margin-bottom: 17px;
 
   padding-top: 161px;
+
+  @media screen and (min-width: 1280px) {
+    height: 525px;
+  }
 }
 
 .products__img {
   position: absolute;
   top: -113px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     top: -210px;
   }
 }
 
 .products-set__title {
-  text-align: center;
-
   color: $primary-white-color;
-
   font-family: 'Titan One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
-  /* identical to box height */
-
-  text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 30px;
 
-  @media screen and (min-width: 1200px) {
+  @include font(20px, 1.15, 0.04em, normal, center);
+
+  // text-align: center;
+  // font-style: normal;
+  // font-weight: 400;
+  // font-size: 20px;
+  // line-height: 1.15;
+  // letter-spacing: 0.04em;
+
+  @media screen and (min-width: 1280px) {
     font-size: 30px;
     line-height: 35px;
     margin-bottom: 32px;
@@ -146,30 +154,25 @@
 }
 
 .products__description {
-  text-align: center;
-
   color: $primary-white-color;
-
   font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.52;
-
-  text-align: center;
-  letter-spacing: 0.04em;
-
-  margin-left: auto;
-  margin-right: auto;
   min-width: 200px;
-
   margin-bottom: 30px;
+
+  @include font(14px, 1.52, 0.04em, 700, center);
+  // text-align: center;
+  // font-style: normal;
+  // font-weight: 700;
+  // font-size: 14px;
+  // line-height: 1.52;
+  // letter-spacing: 0.04em;
 
   @media screen and (min-width: 768px) {
     line-height: 1.8;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     font-size: 16px;
+    margin-bottom: 62px;
   }
 }
 
@@ -182,35 +185,26 @@
 }
 
 .pseudo {
+  position: relative;
   width: 20px;
   height: 7px;
-
-  position: relative;
 
   margin-bottom: 30px;
 }
 .pseudo::after {
+  position: absolute;
   content: '';
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: $primary-white-color;
 
-  position: absolute;
-
   box-shadow: 8px 0 0 0 $primary-white-color, 16px 0 0 0 $primary-white-color;
 }
 
 .products-set__btn {
-  border: none;
-  // width: 40px;
-  // height: 40px;
-  padding: 10px 10px 0px 0px;
-  border-radius: 50%;
-  background-color: white;
-
-  margin-bottom: 40px;
-
+  display: inline-block;
+  margin-top: auto;
   cursor: pointer;
 
   &:hover .products-overlay,
@@ -219,29 +213,31 @@
     transform: translateX(0);
     opacity: 1;
   }
-  &:hover .products-overlay--ice-cream {
+  &:hover .products-overlay--ice-cream,
+  &:focus .products-overlay--ice-cream {
     background-color: $header-section-color;
   }
 
-  &:hover .products-overlay--ice-coffe {
+  &:hover .products-overlay--ice-coffe,
+  &:focus .products-overlay--ice-coffe {
     background-color: $rectangle-color-coffee;
   }
-  &:hover .products-overlay--milkshakes {
+  &:hover .products-overlay--milkshakes,
+  &:focus .products-overlay--milkshakes {
     background-color: $rectangle-color-milkshakes;
+  }
+  @media screen and (min-width: 768px) {
   }
 }
 
 .products-set__next-svg {
-  @include icons(20px, 20px, $accent-color);
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
+  @include icons(40px, 40px, $accent-color);
+  background-color: white;
   border-radius: 50%;
+  padding: 12px;
 }
 
 .products-overlay {
-  // display: none;
-
   padding: 20px 20px;
 
   background-image: url(../images/header/png/slider_girl_desk.png);
@@ -250,7 +246,6 @@
   background-position-y: bottom;
   background-size: contain;
 
-  opacity: 0;
   position: absolute;
 
   top: -113px;
@@ -264,43 +259,49 @@
   border-radius: 24px;
   transform: translateX(-100%);
 
-  transition: transform 1s cubic-bezier(0, 0, 1, 1);
+  transition: transform $transition-duration $transition-function;
 }
 
 .products-overlay__descr {
   position: absolute;
-  top: 40px;
-  left: 50px;
-  text-align: center;
-
+  top: 80px;
+  left: 30%;
+  font-family: 'DM Sans';
   color: $primary-white-color;
 
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.52;
-
-  text-align: center;
-  letter-spacing: 0.04em;
+  @include font(14px, 1.52, 0.04em, 700, center);
+  // font-style: normal;
+  // font-weight: 700;
+  // font-size: 14px;
+  // line-height: 1.52;
+  // text-align: center;
+  // letter-spacing: 0.04em;
 
   width: 100%;
   height: 100%;
 
-  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform $transition-duration $transition-function;
+
+  @media screen and (min-width: 1280px) {
+    top: 100px;
+  }
 }
 
 .products-overlay__descr--red {
+  position: absolute;
+  top: 7%;
+  left: 20%;
+
   color: $accent-color;
-
   font-family: 'Titan One';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 34px;
-  line-height: 39px;
-
-  letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @include font(34px, 1.15, 0.04em, normal);
+  // font-style: normal;
+  // font-weight: normal;
+  // font-size: 34px;
+  // line-height: 39px;
+  // letter-spacing: 0.04em;
 
   @media screen and (min-width: 768px) {
     font-size: 30px;
@@ -309,11 +310,19 @@
     float: left;
   }
 
-  @media screen and (min-width: 1200px) {
-    font-size: 58px;
-    line-height: 66px;
+  @media screen and (min-width: 1280px) {
+    font-size: 50px;
+    line-height: 60px;
 
     margin-bottom: 50px;
+  }
+}
+
+.products-overlay__descr--milkshakes {
+  left: 10%;
+
+  @media screen and (min-width: 768px) {
+    left: 5%;
   }
 }
 
@@ -327,15 +336,15 @@
   text-align: center;
 
   color: $primary-white-color;
-
   font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.52;
 
-  text-align: center;
-  letter-spacing: 0.04em;
+  @include font(14px, 1.52, 0.04em, 700, center);
+  // font-style: normal;
+  // font-weight: 700;
+  // font-size: 14px;
+  // line-height: 1.52;
+  // text-align: center;
+  // letter-spacing: 0.04em;
 
   @media screen and (min-width: 768px) {
     top: 130px;
@@ -344,17 +353,10 @@
 
 .products-consist__item {
   color: $primary-white-color;
-
   font-family: 'Titan One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 1.15;
-  /* identical to box height */
-
-  text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @include font(25px, 1.15, 0.04em, 400, center);
 
   @media screen and (min-width: 768px) {
     margin-bottom: 10px;
