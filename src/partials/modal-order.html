@@ -28,38 +28,74 @@
                 </span>
             </label>
 
-            <ul class="modal-products">
-                <li class="modal-products__item">
-                    <label>
-                        <input type="checkbox" name="products" value="ice-cream" />
+            <ul class="modal-order-products list">
+                <li class="modal-order-products__item">
+                    <label class="modal-order-products__thumb" for="products-ice-cream">
+                        <input type="checkbox" name="products" id="products-ice-cream" value="ice-cream"
+                            class="visually-hidden modal-order__checkbox modal-order__checkbox--ice-cream">
+                        <svg class="modal-order__checkbox-icon modal-order__checkbox-icon--ice-cream" width="16" height="15">
+                            <use href="./images/icons/symbol-defs2.svg#icon-modal-checkbox"></use>
+                        </svg>
+                        <picture>
+                            <source
+                                srcset="./images/products/webp/ice_cream_mob.webp 1x, ./images/products/webp/ice_cream_mob.webp 2x, ./images/products/webp/ice_cream_mob.webp 3x"
+                                type="image/webp">
+                            <source
+                                srcset="./images/products/png/ice_cream_mob.png 1x, ./images/products/png/ice_cream_mob.png 2x, ./images/products/png/ice_cream_mob.png 3x"
+                                type="image/webp">
+                            <img src="./images/products/png/ice_cream_mob.png" class="modal-order-products__image" width="90" alt="ice cream">
+                        </picture>
+                        <span class="text modal-order-products__text">ice cream</span>
                     </label>
-                    <img src="./images/products/png/ice_cream_mob.png" width="80">
-                    <p class="text">ice cream</p>
-                    <label>
-                        <input type="number" name="ice-cream__quantity" value="0" min="1" max="20" step="1"
-                            class="modal-products__quantity" />
+                    <label class="modal-order__thumb-quantity">
+                        <input type="number" name="ice-cream__quantity" value="1" min="1" max="20" step="1"
+                            class="modal-order-products__quantity modal-order-products__quantity--ice-cream" />
                     </label>
                 </li>
-                <li class="modal-products__item">
-                    <label>
-                        <input type="checkbox" name="products" value="ice-coffee" />
+                <li class="modal-order-products__item">
+                    <label class="modal-order-products__thumb" for="products-ice-coffee">
+                        <input type="checkbox" name="products" id="products-ice-coffee" value="ice-coffee"
+                            class="visually-hidden modal-order__checkbox modal-order__checkbox--ice-coffee">
+                        <svg class="modal-order__checkbox-icon modal-order__checkbox-icon--ice-coffee" width="16" height="15">
+                            <use href="./images/icons/symbol-defs2.svg#icon-modal-checkbox"></use>
+                        </svg>
+                        <picture>
+                            <source
+                                srcset="./images/products/webp/ice_coffee_mob.webp 1x, ./images/products/webp/ice_coffee_mob.webp 2x, ./images/products/webp/ice_coffee_mob.webp 3x"
+                                type="image/webp">
+                            <source
+                                srcset="./images/products/png/ice_coffee_mob.png 1x, ./images/products/png/ice_coffee_mob.png 2x, ./images/products/png/ice_coffee_mob.png 3x"
+                                type="image/webp">
+                            <img src="./images/products/png/ice_coffee_mob.png" class="modal-order-products__image" width="90" alt="ice coffee">
+                        </picture>
+                        <span class="text modal-order-products__text">ice coffee</span>
                     </label>
-                    <img src="./images/products/png/ice_coffee_mob.png" width="80">
-                    <p class="text">ice coffee</p>
-                    <label>
-                        <input type="number" name="ice-coffee__quantity" value="0" min="1" max="20" step="1"
-                            class="modal-products__quantity" />
+                    <label class="modal-order__thumb-quantity">
+                        <input type="number" name="ice-coffee__quantity" value="1" min="1" max="20" step="1"
+                            class="modal-order-products__quantity modal-order-products__quantity--ice-coffee" />
                     </label>
                 </li>
-                <li class="modal-products__item">
-                    <label>
-                        <input type="checkbox" name="products" value="milkshakes" />
+                <li class="modal-order-products__item">
+                    <label class="modal-order-products__thumb" for="products-milkshake">
+                        <input type="checkbox" name="products" id="products-milkshake" value="milkshakes"
+                            class="visually-hidden modal-order__checkbox modal-order__checkbox--milkshake">
+                        <svg class="modal-order__checkbox-icon modal-order__checkbox-icon--milkshake" width="16" height="15">
+                            <use href="./images/icons/symbol-defs2.svg#icon-modal-checkbox"></use>
+                        </svg>
+                        <picture>
+                            <source
+                                srcset="./images/products/webp/milkshake_mob.webp 1x, ./images/products/webp/milkshake_mob.webp 2x, ./images/products/webp/milkshake_mob.webp 3x"
+                                type="image/webp">
+                            <source
+                                srcset="./images/products/png/milkshake_mob.png 1x, ./images/products/png/milkshake_mob.png 2x, ./images/products/png/milkshake_mob.png 3x"
+                                type="image/webp">
+                            <img src="./images/products/png/milkshake_mob.png" class="modal-order-products__image" width="90" alt="milkshake">
+                        </picture>
+                        <span class="text modal-order-products__text">milkshakes</span>
                     </label>
-                    <img src="./images/products/png/milkshake_mob.png" width="80">
-                    <p class="text">milkshakes</p>
-                    <label>
-                        <input type="number" name="milkshakes__quantity" value="0" min="1" max="20" step="1"
-                            class="modal-products__quantity" />
+                    <label class="modal-order__thumb-quantity">
+                        <input type="number" name="milkshakes__quantity" value="1" min="1" max="20" step="1"
+                            class="modal-order-products__quantity modal-order-products__quantity--milkshake" />
                     </label>
                 </li>
             </ul>
