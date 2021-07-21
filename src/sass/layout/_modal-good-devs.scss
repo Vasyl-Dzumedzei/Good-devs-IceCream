@@ -1,0 +1,97 @@
+.good-devs-modal__title {
+  font-family: Titan One;
+  @include font(18px, 1.313, 0em, 700, center);
+  color: $accent-color;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    @include font(22px, 1.313, 0em, 700, center);
+  }
+}
+
+.good-devs-modal-wrapper {
+  display: flex;
+
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+.good-devs-modal__photo--left {
+  width: 85px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.good-devs-modal__photo--right {
+  width: 85px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.good-devs-modal__thumb--left,
+.good-devs-modal__thumb--right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  background-color: $primary-white-color;
+  border-right: 1px solid $background-comment-color;
+  border-left: 1px solid $background-comment-color;
+  box-shadow: 0px 8px 40px $location-box-shadow-color;
+}
+
+.good-devs-modal__thumb--left {
+  border-radius: 24px 0 24px 0;
+}
+
+.good-devs-modal__thumb--right {
+  border-radius: 0 24px 0 24px;
+}
+
+.good-devs-modal-thumb_first {
+  width: 100%;
+  border-bottom: 1px solid $background-comment-color;
+}
+
+.good-devs-modal__name--left {
+  @include font(18px, 1.265, 0.04em, 700, right);
+  color: $comment-text-color;
+  //   padding-bottom: 5px;
+}
+
+.good-devs-modal__role--left {
+  @include font(15px, 1.365, 0em, 500, right);
+  color: $second-text-color;
+  padding-bottom: 5px;
+}
+
+.good-devs-modal__action--left {
+  margin-top: 5px;
+  @include font(15px, 1.365, 0em, 500, right);
+  color: $mobile-menu-items-color;
+}
+
+.good-devs-modal__name--right {
+  @include font(18px, 1.265, 0.04em, 700, left);
+  color: $comment-text-color;
+  //   padding-bottom: 5px;
+}
+
+.good-devs-modal__role--right {
+  @include font(15px, 1.365, 0em, 500, left);
+  color: $second-text-color;
+  padding-bottom: 5px;
+}
+
+.good-devs-modal__action--right {
+  margin-top: 5px;
+  @include font(15px, 1.365, 0em, 500, left);
+  color: $mobile-menu-items-color;
+}
