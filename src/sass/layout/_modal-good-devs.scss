@@ -97,3 +97,17 @@
   @include font(15px, 1.365, 0em, 500, left);
   color: $mobile-menu-items-color;
 }
+
+.development {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include font(12px, 1.365, 0.04em, 500);
+  padding-top: 15px;
+  color: $comment-text-color;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
