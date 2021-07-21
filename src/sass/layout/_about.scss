@@ -22,6 +22,16 @@
     screen and (min-resolution: 3dppx) {
     background-image: url(../images/about/png/milk_splash_mob@3x.png);
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 139px;
+    padding-bottom: 66px;
+    background-image: none;
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(../images/about/png/milk_splash_desk.png);
+    background-position: bottom -105px center;
+  }
 }
 .title-label {
   margin-bottom: 15px;
@@ -35,7 +45,38 @@
   text-transform: uppercase;
 
   color: $color-ellipse;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+    font-size: 26px;
+    line-height: 1.153;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 1.133;
+    letter-spacing: 0.04em;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .section-about__flex-box {
+    display: flex;
+  }
+}
+.section-about__text {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    justify-content: flex-end;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 463px;
+  }
+}
+
 .section-about__title {
   margin-bottom: 26px;
 
@@ -44,6 +85,18 @@
   text-transform: uppercase;
 
   color: $accent-color;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+    font-size: 48px;
+    line-height: 1.145;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 55px;
+    font-size: 58px;
+    line-height: 1.137;
+    letter-spacing: 0.06em;
+  }
 }
 .section-about__image {
   width: 280px;
@@ -52,7 +105,7 @@
   margin-left: auto;
   margin-bottom: 46px;
   background-color: transparent;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-image: url(../images/about/png/cow_milk_mob.png);
 
@@ -69,11 +122,23 @@
     screen and (min-resolution: 3dppx) {
     background-image: url(../images/about/png/cow_milk_mob@3x.png);
   }
+
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    height: 339px;
+    margin: 0 17px 0 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 516px;
+    height: 516px;
+    margin-right: 74px;
+    justify-content: center;
+  }
 }
 .section-about__review {
   padding-left: 30px;
   padding-right: 30px;
-  margin-bottom: 17px;
 
   font-family: $primary-font-family;
 
@@ -83,11 +148,41 @@
   /* or 19px */
 
   color: $second-text-color;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    font-size: 14px;
+    line-height: 176%;
+  }
+  @media screen and (min-width: 1280px) {
+    line-height: 194%;
+    letter-spacing: 0.04em;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 19px;
+  }
+}
+
+.section-about__review:last-child {
+  margin-bottom: 32px;
+}
+.section-about__text .bottom {
+  margin-bottom: 28px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 62px;
+  }
 }
 
 .section-about--color {
   color: $comment-text-color;
-  margin-bottom: 31px;
+  margin-bottom: 34px;
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 176%;
+  }
 }
 // button
 
@@ -108,6 +203,10 @@
   line-height: 18px;
   color: $accent-color;
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
 }
 
 .extra-text {
@@ -116,7 +215,6 @@
 
 #read-more:checked ~ .extra-text {
   display: block;
-  margin-bottom: 30px;
 }
 
 .less {
