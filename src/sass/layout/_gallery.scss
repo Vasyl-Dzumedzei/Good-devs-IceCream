@@ -1,6 +1,10 @@
 .gallery-section {
   min-height: 122px;
   background-image: linear-gradient(to bottom, $made-color 50%, $primary-white-color 50%);
+
+  @media screen and (min-width: 768) {
+    min-height: 264px;
+  }
 }
 
 .gallery {
