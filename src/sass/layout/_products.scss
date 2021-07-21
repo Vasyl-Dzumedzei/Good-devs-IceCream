@@ -260,6 +260,11 @@
   transform: translateX(-100%);
 
   transition: transform $transition-duration $transition-function;
+
+  @media screen and (min-width: 1280px) {
+    height: 735px;
+    top: -210px;
+  }
 }
 
 .products-overlay__descr {
@@ -296,7 +301,7 @@
   font-family: 'Titan One';
   text-transform: uppercase;
 
-  @include font(34px, 1.15, 0.04em, normal);
+  @include font(30px, 1.15, 0.04em, normal);
   // font-style: normal;
   // font-weight: normal;
   // font-size: 34px;
@@ -304,25 +309,16 @@
   // letter-spacing: 0.04em;
 
   @media screen and (min-width: 768px) {
-    font-size: 30px;
-    line-height: 39px;
-    margin-left: 0;
-    float: left;
+    font-size: 28px;
+    left: 5%;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 50px;
-    line-height: 60px;
+    font-size: 35px;
+    line-height: 30px;
+    left: 3%;
 
     margin-bottom: 50px;
-  }
-}
-
-.products-overlay__descr--milkshakes {
-  left: 10%;
-
-  @media screen and (min-width: 768px) {
-    left: 5%;
   }
 }
 
