@@ -35,12 +35,12 @@
 }
 .footer-block__text {
    /* overflow: hidden; */
-@include font(18px, 1.6667, .04em, normal, left);
+@include font(18px, 1.6667, 0.04em, normal, left);
     font-family: $heading-font-family;
     color: $color-ellipse;
     text-transform: uppercase;
     @media screen and (min-width: 480px ) {
-@include font(26px, 1.1538, .04em, normal, left);
+@include font(26px, 1.1538, 0.04em, normal, left);
     }
 }
 /*.footer-block__text:hover .footer-block__text-logo {
@@ -58,7 +58,7 @@
     color: $accent-color;
     margin-top: 17px;
     @media screen and (min-width: 480px ) {
-@include font(48px, 1.1458, .06em, normal, left);
+@include font(48px, 1.1458, 0.06em, normal, left);
     }
 }
 .footer-block__item {
@@ -104,14 +104,14 @@
     border-radius: 50%;
 }
 .address__text {
-@include font(11px, 1.86, .02em, 700, center);
+@include font(11px, 1.86, 0.02em, 700, center);
     display: flex;
     justify-content: flex-end;
     font-style: normal;
     font-family: $primary-font-family;
     color: $comment-text-color;
     @media screen and (min-width: 1280px) {
-@include font(11px, 1.86, .02em, 700, center);
+@include font(11px, 1.86, 0.02em, 700, center);
     }
 }
 .address__link {
