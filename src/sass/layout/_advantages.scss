@@ -22,7 +22,7 @@
   &::before {
     content: '';
     display: block;
-    background-image: url(../images/icons/glass_milk.svg);
+    // background-image: url(../images/icons/glass_milk.svg);
     background-repeat: no-repeat;
     margin-bottom: 16px;
 
@@ -31,12 +31,12 @@
   }
   &--apples::before {
     width: 50px;
-    background-image: url(../images/icons/glass_fruit.svg);
+    // background-image: url(../images/icons/glass_fruit.svg);
   }
 
   &--lollipop::before {
     width: 44px;
-    background-image: url(../images/icons/ice_cream.svg);
+    // background-image: url(../images/icons/ice_cream.svg);
   }
 }
 
