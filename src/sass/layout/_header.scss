@@ -206,15 +206,48 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.4);
 }
 
 .site-list__link {
+  position: relative;
   display: inline-block;
   padding-top: 12px;
   padding-bottom: 12px;
   @include font(14px, 1.302, 0.04em, 700, left);
   color: $primary-white-color;
+  transition: color $transition-duration $transition-function;
+
   @media screen and(min-width: 1280px) {
     @include font(16px, 1.302, 0.04em, 700, left);
     padding-top: 50px;
     padding-bottom: 15px;
+
+    &::after {
+      position: absolute;
+      left: 0%;
+      bottom: 0%;
+
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accent-color;
+
+      opacity: 0;
+      transform: scalex(0);
+      transform-origin: center left;
+      transition: opacity $transition-duration $transition-function,
+        transform $transition-duration $transition-function;
+    }
+    &:hover::after,
+    &:focus::after,
+    &:active::after {
+      opacity: 1;
+      transform: scalex(1);
+    }
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
   }
 }
 
