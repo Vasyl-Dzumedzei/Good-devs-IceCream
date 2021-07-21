@@ -24,12 +24,18 @@
   height: auto;
   object-fit: cover;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 11px;
+  transition: transform 500ms $transition-function;
 }
 
-.gallery__image:hover .picture {
-  transform: scale(1.2);
-  transition: transform $transition-duration $transition-function;
+.picture:hover,
+.picture:focus {
+  transform: scale(2.5);
+}
+
+.picture_4:hover,
+.picture_4:focus {
+  transform: scale(1.4);
 }
 
 .gallery__item--flex {
