@@ -25,6 +25,7 @@
   object-fit: cover;
   border: 1px solid transparent;
   border-radius: 12px;
+  cursor: pointer;
   transition: transform 500ms $transition-function;
 }
 
