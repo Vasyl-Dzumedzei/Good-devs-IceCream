@@ -1,7 +1,9 @@
 .contacts-section {
+  padding-bottom: 113px;
   background-image: linear-gradient(to top, $made-color 92%, $primary-white-color 8%);
 
   @media screen and (min-width: 768px) {
+    padding-bottom: 165px;
     background-image: linear-gradient(to top, $made-color 85%, $primary-white-color 15%);
   }
   @media screen and (min-width: 1280px) {
