@@ -270,3 +270,8 @@
     outline: 1px solid $accent-color;
   }
 }
+
+.modal-button-close,
+.modal-form__button-submit {
+  cursor: pointer;
+}
