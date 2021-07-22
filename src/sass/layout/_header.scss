@@ -44,6 +44,12 @@ $header-section-color-transparent: rgba(255, 184, 202, 0.4);
   text-transform: uppercase;
 }
 
+.menu-button,
+.button-order,
+.button-order-mobile {
+  cursor: pointer;
+}
+
 .menu-button {
   position: absolute;
   top: 25px;
