@@ -38,20 +38,28 @@
 }
 
 .rev-descr::before {
-  content: '\275E';
-  color: #e1e1e1;
   position: absolute;
-  font-size: 54px;
-
+  z-index: -1;
+  content: ' ';
+  width: 54px;
+  height: 40px;
+  background-repeat: no-repeat;
   top: 28px;
-  left: 41px;
+  left: 61px;
+  fill: none;
+  background: url(../images/icons/comma.svg);
+
+  // content: '\275E';
+  // color: #e1e1e1;
+  // position: absolute;
+  // font-size: 54px;
+
+  // top: 28px;
+  // left: 41px;
 
   @media screen and (min-width: 768px) {
+    top: 32px;
     left: 60px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    left: 80px;
   }
 }
 
